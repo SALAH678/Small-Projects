@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  gap: 4rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1400px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 2.6rem;
+}
+
+i {
+  margin: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
+i:hover {
+  background-color: white;
+  color: hsl(300, 69%, 71%);
+}
+
+div {
+  color: white;
+  width: 35%;
+  max-width: 500px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  font-size: 2.4rem;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+button {
+  color: hsl(257, 40%, 49%);
+  background-color: white;
+  border: none;
+  width: 35%;
+  padding: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1.4rem;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0.7rem 0;
+  text-align: center;
+}
+
+button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.illustration-image {
+  margin-left: 3rem;
+  max-width: 800px;
+  width: 70%;
+}
+
+.logo {
+  max-width: 270px;
+  min-width: 100px;
+  width: 15%;
+  margin-left: 6rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-size: contain;
+  }
+
+  .logo {
+    margin-left: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .illustration-image {
+    max-width: 400px;
+    margin-left: 0;
+  }
+
+  div {
+    max-width: 400px;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  button {
+    width: 90%;
+    margin: 1rem auto;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+}

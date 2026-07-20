@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about {
+  background-color: white;
+  flex: 0.8;
+  padding: 2rem;
+}
+
+.about h1 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+  margin: 0 0 1rem 0;
+  padding: 0;
+  flex: 1;
+}
+
+.about h2 {
+  color: hsl(71, 73%, 54%);
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 1.3vw, 1.8rem);
+}
+
+.about p {
+  margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+  line-height: clamp(1.4rem, 1.6vw, 2rem);
+  color: hsl(218, 22%, 67%);
+  width: min(85%, 750px);
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+}
+
+.subscription,
+.more-details {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.subscription {
+  background-color: hsl(179, 62%, 45%);
+  padding: 2rem 3rem;
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: clamp(1.2rem, 1.2vw, 2rem);
+  font-weight: 700;
+  margin-top: max(10%, 50px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.price-num {
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 700;
+}
+
+.price-text {
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.55);
+}
+
+.subscription p:last-of-type {
+  font-size: clamp(0.9rem, 1.1vw, 1.5rem);
+}
+
+.more-details {
+  background-color: hsl(179, 62%, 48%);
+  padding: 2rem 3rem;
+}
+
+.more-details h3,
+.subscription h3 {
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.more-details ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+  line-height: clamp(1.4rem, 1.6vw, 2rem);
+  font-weight: 400;
+}
+
+@media (max-width: 780px) {
+  .details {
+    flex-direction: column;
+  }
+}

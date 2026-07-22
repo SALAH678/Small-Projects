@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project-3</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="information">
+        <h1>10,000+ of our users love our products.</h1>
+        <p>
+          We only provide great products combined with excellent customer service. See what our satisfied customers are
+          saying about our services.
+        </p>
+      </section>
+      <section class="ratings">
+        <div class="rating-card">
+          <div class="rating-stars">
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+          </div>
+          <p>Rated 5 Stars in Reviews</p>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+          </div>
+          <p>Rated 5 Stars in Report Guru</p>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+            <img src="images/icon-star.svg" alt="star" />
+          </div>
+          <p>Rated 5 Stars in BestTech</p>
+        </div>
+      </section>
+      <section class="reviews">
+        <article class="review-card card-1">
+          <header class="review-header">
+            <img src="images/image-colton.jpg" alt="Colton Smith" />
+            <div class="user-info">
+              <h2>Colton Smith</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </header>
+          <blockquote>
+            "We needed the same printed design as the one we had ordered a week prior. Not only did they find the
+            original order, but we also received it in time. Excellent!"
+          </blockquote>
+        </article>
+        <article class="review-card card-2">
+          <header class="review-header">
+            <img src="images/image-irene.jpg" alt="Irene Roberts" />
+            <div class="user-info">
+              <h2>Irene Roberts</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </header>
+          <blockquote>
+            "Customer service is always excellent and very quick turn around. Completely delighted with the simplicity
+            of the purchase and the speed of delivery."
+          </blockquote>
+        </article>
+        <article class="review-card card-3">
+          <header class="review-header">
+            <img src="images/image-anne.jpg" alt="Anne Wallace" />
+            <div class="user-info">
+              <h2>Anne Wallace</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </header>
+          <blockquote>
+            "Put on order with this company and can only praise them for the very high standard. Will definitely use
+            them again and recommend them to everyone!"
+          </blockquote>
+        </article>
+      </section>
+    </main>
+    <script>
+      console.log("Viewport height:", window.innerHeight);
+      console.log("Document height:", document.documentElement.scrollHeight);
+      let lowest = null;
+      let maxBottom = 0;
+
+      document.querySelectorAll("*").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+
+        if (rect.bottom > maxBottom) {
+          maxBottom = rect.bottom;
+          lowest = el;
+        }
+      });
+
+      console.log("Lowest element:", lowest);
+      console.log("Bottom position:", maxBottom);
+      console.log("Viewport height:", window.innerHeight);
+
+      document.querySelectorAll(".review-card").forEach((card) => {
+        console.log(
+          card.className,
+          card.getBoundingClientRect().top,
+          card.getBoundingClientRect().bottom,
+          card.getBoundingClientRect().height,
+        );
+      });
+
+      const r = document.querySelector(".reviews").getBoundingClientRect();
+
+      console.log({
+        top: r.top,
+        bottom: r.bottom,
+        height: r.height,
+      });
+
+      ["main", ".information", ".ratings", ".reviews"].forEach((sel) => {
+        const r = document.querySelector(sel).getBoundingClientRect();
+        console.log(sel, {
+          top: r.top,
+          bottom: r.bottom,
+          height: r.height,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -15,11 +15,6 @@ body {
 }
 
 main {
-  /* padding: 5%; */
-  /* padding: 41px; */
-  /* padding: min(5%, 41px); */
-  /* padding: clamp(20px, 5%, 41px); */
-  /* padding: 50px; */
   padding: clamp(2rem, 4vw, 2.5rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -39,8 +34,6 @@ main {
 .information {
   grid-area: information;
   padding: 2rem 3rem;
-  /* important */
-  /* align-self: end; */
 }
 
 .information h1 {
@@ -60,7 +53,6 @@ main {
 .ratings {
   grid-area: ratings;
   padding: 3rem;
-  /* align-self: end; */
 }
 
 .rating-card {
@@ -109,17 +101,14 @@ main {
 }
 
 .card-1 {
-  /* margin: 4% 0; */
   transform: translateY(0);
 }
 
 .card-2 {
-  /* margin: 4.5% 0; */
   transform: translateY(20px);
 }
 
 .card-3 {
-  /* margin: 6% 0; */
   transform: translateY(40px);
 }
 
@@ -127,7 +116,6 @@ main {
   display: flex;
   align-items: center;
   gap: 5%;
-  /* padding: 7% 10%; */
 }
 
 .review-header img {
@@ -137,14 +125,12 @@ main {
 
 .user-info h2 {
   color: hsl(0, 0%, 100%);
-  /* font-size: clamp(1rem, 1.5vw, 1.5rem); */
   margin-bottom: 0;
   font-weight: 500;
 }
 
 .user-info p {
   color: hsl(333, 80%, 67%);
-  /* font-size: clamp(1rem, 1.5vw, 1.5rem); */
   margin-top: 5%;
   font-weight: 400;
 }
@@ -152,10 +138,7 @@ main {
 blockquote {
   color: hsl(0, 0%, 100%);
   margin: 1rem 0 0 0;
-  /* font-size: 1.2rem; */
-  /* font-size: clamp(1rem, 1.5vw, 1.5rem); */
   font-weight: 100;
-  /* line-height: 1.5rem; */
   line-height: max(1.5vw, 1.2rem);
   font-size: max(1.2vw, 1rem);
 }

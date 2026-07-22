@@ -25,6 +25,7 @@ main {
   background-color: hsl(0, 0%, 100%);
   width: 50%;
   max-width: 900px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   border: none;
@@ -144,5 +145,10 @@ main {
 @media (max-width: 780px) {
   .details {
     flex-direction: column;
+  }
+
+  body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
